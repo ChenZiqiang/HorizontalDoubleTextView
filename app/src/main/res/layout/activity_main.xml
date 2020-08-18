@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="使用示例" />
+
+    <com.example.com.HorizontalDoubleTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_text="姓名"
+        app:left_text_color="@android:color/black"
+        app:right_text="陈旭园"
+        app:right_text_color="@android:color/darker_gray"
+        app:right_to_left_padding="15dp" />
+
+    <com.example.com.HorizontalDoubleTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:left_text="职业"
+        app:right_edit="false"
+        app:right_text="android 开发" />
+
+    <com.example.com.HorizontalDoubleTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_text="介绍"
+        app:left_text_background="@android:color/holo_red_light"
+        app:left_text_color="@android:color/white"
+        app:right_gravity="start"
+        app:right_text="一个简单的组合式控件,就是把2个textview组合在一起而已，主要应付重复场景，减少代码量"
+        app:right_text_background="@android:color/holo_blue_dark"
+        app:right_text_color="@android:color/white"
+        app:right_to_left_padding="10dp" />
+
+</LinearLayout>
