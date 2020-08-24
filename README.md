@@ -1,0 +1,2 @@
+# HorizontalDoubleTextView
+横向双Textview控件
