@@ -7,6 +7,7 @@ import android.text.InputType;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -61,13 +62,13 @@ public class HorizontalDoubleTextView extends LinearLayout {
         // 通过这个方法，将你在attrs.xml中定义的declare-styleable的所有属性的值存储到TypedArray.
         // 从TypedArray中取出对应的值来为要设置的属性赋值
         leftText.setText(ta.getString(R.styleable.HorizontalDoubleTextView_left_text));
-        leftText.setTextSize(ta.getDimension(R.styleable.HorizontalDoubleTextView_left_text_size, 14));
+        leftText.setTextSize(TypedValue.COMPLEX_UNIT_PX,ta.getDimension(R.styleable.HorizontalDoubleTextView_left_text_size, 14));
         leftText.setTextColor(ta.getColor(R.styleable.HorizontalDoubleTextView_left_text_color, mContext.getColor(R.color.mine_shaft)));
         leftText.setBackground(ta.getDrawable(R.styleable.HorizontalDoubleTextView_left_text_background));
         leftText.setGravity(ta.getInteger(R.styleable.HorizontalDoubleTextView_left_gravity, Gravity.START | Gravity.CENTER_VERTICAL));
 
         rightText.setText(ta.getString(R.styleable.HorizontalDoubleTextView_right_text));
-        rightText.setTextSize(ta.getDimension(R.styleable.HorizontalDoubleTextView_right_text_size, 14));
+        rightText.setTextSize(TypedValue.COMPLEX_UNIT_PX,ta.getDimension(R.styleable.HorizontalDoubleTextView_right_text_size, 14));
         rightText.setTextColor(ta.getColor(R.styleable.HorizontalDoubleTextView_right_text_color, mContext.getColor(R.color.mine_shaft)));
         rightText.setBackground(ta.getDrawable(R.styleable.HorizontalDoubleTextView_right_text_background));
         rightText.setInputType(ta.getInteger(R.styleable.HorizontalDoubleTextView_right_input_type, InputType.TYPE_CLASS_TEXT));
